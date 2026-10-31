@@ -2,7 +2,7 @@
   "name": "Thermistor",
   "version": "1.0.0",
   "description": "Simple configuration to setup a NPC or PNC Thermistor",
-  "keywords": "thermistor, temperature, sensor, analog, esp32, esp8266",
+  "keywords": "thermistor, temperature, sensor, analog, esp32, esp8266, arduino",
   "authors": [
     {
       "name": "Reenko",
@@ -12,16 +12,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "------------"
+    "url": "https://github.com/Reenko09/Thermistor"
   },
-  "license": "MIT",
   "frameworks": "arduino",
+  "license" : "MIT",
   "platforms": "*",
   "export": {
     "include": [
       "src/*",
-      "library.json",
-      "README.md"
+      "library.json"
     ]
   }
 }

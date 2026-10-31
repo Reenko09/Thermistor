@@ -1,0 +1,2 @@
+# Thermistor
+Simple thermistor NTC
