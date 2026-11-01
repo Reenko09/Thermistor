@@ -84,7 +84,14 @@ void Thermistor::debug()
     int res {0};
     const char* message = "";
 
-    Serial.println("\n--- INICIANDO TESTES DE DEPURAÇÃO ---\n");
+    Serial.println("\n--- THERMISTOR DEBUG ---\n\n");
+
+    Serial.printf("Pin: %d | Raw ADC: %d\n", _read_pin, analogRead(_read_pin));
+    Serial.printf("Fixed Resistor (RT): %u Ohms\n", _RT);
+    Serial.printf("Thermistor R0: %u Ohms\n", _R0);
+    Serial.printf("Calculated Beta: %.4f\n", _beta);
+    Serial.printf("--------------------------------\n\n");
+
 
     res = t_debug.begin(5.0, 10000, A0, 'N', 100000, 35563, 549);
     message = (res == 0) ? "EXPECTED" : "UNEXPECTED";
@@ -96,7 +103,6 @@ void Thermistor::debug()
     Serial.print("Test 2 (r2 = 0)\n-> Expected return: -1\n");
     Serial.printf("-> Returned: %d | %s\n\n", res, message);
 
-    
     res = t_debug.begin(5.0, 10000, A0, 'P', 100000, 35563, 549);
     message = (res == 0) ? "EXPECTED" : "UNEXPECTED";
     Serial.print("Test 3 ('P' coeficient)\n-> Expected return: 0\n");

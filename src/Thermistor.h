@@ -32,11 +32,11 @@
             uint32_t r1 = 325550, uint32_t r2 = 6730
         );
 
-        float read_celcius();
+        double read_celcius();
 
-        float read_kelvin();
+        double read_kelvin();
 
-        float read_farenheit();
+        double read_farenheit();
 
         void debug();
     };
