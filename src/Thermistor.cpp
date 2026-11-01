@@ -25,7 +25,7 @@ int Thermistor::begin(
     return 0;
 }
 
-float Thermistor::read_kelvin()
+double Thermistor::read_kelvin()
 {
     if (!_is_beginned) return -1;
 
@@ -62,7 +62,7 @@ float Thermistor::read_kelvin()
     
 }
 
-float Thermistor::read_celcius()
+double Thermistor::read_celcius()
 {
     float kelvin = read_kelvin();
     if (kelvin == 0.0) return -273.15; 
@@ -70,7 +70,7 @@ float Thermistor::read_celcius()
     return kelvin - 273.15;
 }
 
-float Thermistor::read_farenheit()
+double Thermistor::read_farenheit()
 {
     float celcius = read_celcius();
     if (celcius == -273.15) return -459.67;
