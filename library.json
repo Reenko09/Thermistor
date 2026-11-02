@@ -1,8 +1,8 @@
 {
   "name": "Thermistor",
   "version": "1.0.0",
-  "description": "Simple configuration to setup a NPC or PNC Thermistor",
-  "keywords": "thermistor, temperature, sensor, analog, esp32, esp8266, arduino",
+  "description": "Simple NTC/PTC thermistor reader (Beta equation) for Arduino, ESP32 and ESP8266",
+  "keywords": "thermistor, ntc, ptc, temperature, sensor, analog, adc, beta, esp32, esp8266, arduino",
   "authors": [
     {
       "name": "Reenko",
@@ -15,12 +15,16 @@
     "url": "https://github.com/Reenko09/Thermistor"
   },
   "frameworks": "arduino",
-  "license" : "MIT",
   "platforms": "*",
+  "license": "MIT",
+  "headers": "Thermistor.h",
   "export": {
     "include": [
       "src/*",
-      "library.json"
+      "examples/*",
+      "library.json",
+      "README.md",
+      "LICENSE"
     ]
   }
 }
