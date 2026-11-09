@@ -15,7 +15,7 @@
     "url": "https://github.com/Reenko09/Thermistor"
   },
   "frameworks": "arduino",
-  "platforms": "*",
+  "platforms": "espressif32",
   "license": "MIT",
   "headers": "Thermistor.h",
   "export": {
